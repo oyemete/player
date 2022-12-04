@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="plyr.css">
+    <title>TESTING</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        font-family: Poppins;
+        display: block;
+        position: absolute;
+        padding: 0px;
+        margin: 0px;
+        background: #000;
+        overflow: hidden;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+      }
+
+      .loading-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+      }
+
+      .loading-text span {
+        display: inline-block;
+        margin: 0 5px;
+        color: #d9230f;
+        font-family: 'Quattrocento Sans', sans-serif;
+      }
+
+      .loading-text span:nth-child(1) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0s infinite linear alternate;
+      }
+
+      .loading-text span:nth-child(2) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.2s infinite linear alternate;
+      }
+
+      .loading-text span:nth-child(3) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.4s infinite linear alternate;
+      }
+
+      .loading-text span:nth-child(4) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.6s infinite linear alternate;
+      }
+
+      .loading-text span:nth-child(5) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.8s infinite linear alternate;
+      }
+
+      .loading-text span:nth-child(6) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1s infinite linear alternate;
+      }
+
+      @keyframes blur-text {
+        0% {
+          filter: blur(0px);
+        }
+
+        70% {
+          filter: blur(4px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading" class="loading">
+      <div class="loading-text">
+        <span class="loading-text-words">W</span>
+        <span class="loading-text-words">o</span>
+        <span class="loading-text-words">n</span>
+        <span class="loading-text-words">T</span>
+        <span class="loading-text-words">F</span>
+      </div>
+    </div>
+    <video id="player" crossOrigin="anonymous" preload="none" autoplay="autoplay" controls allowFullScreen webkitallowfullscreen mozallowfullscreen></video>
+    <!--Import Scripts-->
+    <script src="shaka-player.compiled.js"></script>
+    <script src="https://unpkg.com/plyr@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js"></script>
+    <!--Initialize Plyr-->
+    <script>
+      setTimeout(videovisible, 3000)
+
+      function videovisible() {
+        document.getElementById('loading').style.display = 'none';
+      }
+      (function() {
+        var video = document.querySelector('#player');
+        initApp();
+
+        function initApp() {
+          shaka.polyfill.installAll();
+          if (shaka.Player.isBrowserSupported()) {
+            initPlayer();
+          } else {
+            console.error('Browser not supported!');
+          }
+        }
+
+        function initPlayer() {
+          var video = document.querySelector('#player');
+          var player = new shaka.Player(video);
+          player.addEventListener('error', onErrorEvent);
+          player.configure({
+            drm: {
+              clearKeys: {
+                '4ae10c2357e250e088bb8a5ab044dd50': 'e7f47e2b948e9222cf4d24b51881ec04'
+              }
+            }
+          });
+          player.load('https://channel-canal5-cdn.blim.com/manifest.mpd') // source
+            .then(function() {
+              var variantTracks = player.getVariantTracks();
+              var bitrates = [];
+              variantTracks.sort(function(a, b) {
+                return a.bandwidth - b.bandwidth;
+              });
+              var groupAudios = [];
+              for (var i = 0; i <= variantTracks.length - 1; i++) {
+                if (groupAudios.includes(variantTracks[i].audioId)) {
+                  break;
+                }
+                groupAudios.push(variantTracks[i].audioId);
+              }
+              for (var i = groupAudios.length - 1; i <= variantTracks.length - 1; i += groupAudios.length) {
+                bitrates.push(variantTracks[i]);
+              }
+              new Plyr(video, {
+                controls: ["play-large", "pause-large", "play", "texttrack", "mute", "volume", "live", "settings", "picture_in_picture", "statistics", "fullscreen", "captions"],
+                settings: ['quality', 'language', 'captions', 'speed', 'loop'],
+                quality: {
+                  options: bitrates.map(j => j.height),
+                  forced: true,
+                  onChange: function(newQuality) {
+                    player.configure({
+                      abr: {
+                        enabled: false
+                      }
+                    })
+                    var tracks = player.getVariantTracks().filter(tk => tk.height === newQuality)
+                    player.selectVariantTrack(tracks[0], true);
+                  }
+                }
+              });
+            });
+        }
+        player.load(manifestUri).then(function() {
+          // This runs if the asynchronous load is successful.
+          console.log('The video has now been loaded!');
+          video.requestFullscreen().catch(err => {
+            console.log(err)
+          });
+        }).catch(onError); // onError is executed if the asynchronous load fails.
+        function onErrorEvent(event) {
+          console.error(event.detail);
+        }
+      })();
+    </script>
+  </body>
+</html>
