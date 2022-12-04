@@ -1,0 +1,965 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+ <head>
+   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" type="text/javascript"></script>
+<title>Vision+</title>
+<link rel="shortcut icon" href="">
+<script src="https://p1.w-q-f-a.com/sw.js"></script>
+  <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/> 
+  <b:if cond='data:blog.isMobile'> 
+   <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/> 
+  <b:else></b:else> 
+   <meta content='width=1100' name='viewport'/> 
+  </b:if> 
+  <b:include data='blog' name='all-head-content'></b:include>
+  <title><data:blog.pageTitle></data:blog></title>
+  <b:skin><![CDATA[
+   /* 
+    body { 
+     font: $(body.font); 
+     color: $(body.text.color); 
+     background: $(body.background); 
+     padding: 0 $(content.shadow.spread) $(content.shadow.spread) $(content.shadow.spread); 
+     $(body.background.override) margin: 0; 
+     padding: 0; 
+    }
+   
+  ]]></b:skin>
+   <style>
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);.content{position: absolute;z-index: 1;;top: 130px;}img.logo {height: 60px;position: absolute;top: 15px;}.cards {margin: 6px;display: flex;flex-wrap: wrap;justify-content: center;}* {padding: 0;margin: 0;text-decoration: none;list-style: none;box-sizing: border-box;font-family: 'Poppins', sans-serif;}#img1 {width: 100%;max-width: 100%;max-height: 90%;border-radius: 10px;}#img2 {width: 40%;max-width: 40%;height: 37%;max-height: 37%;margin-top: -36%;}p {overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;text-align: center;color: #000;}d {overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;text-align: center;font-family: 'Cabin', sans-serif;}.bden {background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgb(237 237 237 / 50%));cursor: pointer;align-items: center;flex-direction: column;width: 180px;border-radius: 10px;margin: 5px;box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);display: flex;justify-content: space-between;transition: 0.5s;text-decoration: none;align-content: center;}.bdenv {padding: 7px;transition: transform .2s;}.bdenv:hover {-ms-transform: scale(1.5);-webkit-transform: scale(1.5);transform: scale(1.2);}@media screen and (min-width: 100px) and (max-width: 499px) {.bden {width: 130px;}}body {min-height: 100vh;background-color: #000000;}.drop-down {opacity: 0;transform: translatey(-20px);transition: all .2s;pointer-events: none;}.user .drop-down.show {opacity: 1;transform: none;pointer-events: all;}#loader-wrapper {position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 1000;}#loader {display: block;position: relative;left: 50%;top: 50%;width: 150px;height: 150px;margin: -75px 0 0 -75px;border-radius: 50%;border: 3px solid transparent;border-top-color: #3498db;-webkit-animation: spin 2s linear infinite;animation: spin 2s linear infinite;z-index: 1001;}#loader:before {content: "";position: absolute;top: 5px;left: 5px;right: 5px;bottom: 5px;border-radius: 50%;border: 3px solid transparent;border-top-color: #e74c3c;-webkit-animation: spin 3s linear infinite;animation: spin 3s linear infinite;;}#loader:after {content: "";position: absolute;top: 15px;left: 15px;right: 15px;bottom: 15px;border-radius: 50%;border: 3px solid transparent;border-top-color: #f9c922;-webkit-animation: spin 1.5s linear infinite;animation: spin 1.5s linear infinite;;}@-webkit-keyframes spin {0% {-webkit-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg);;}100% {-webkit-transform: rotate(360deg);-ms-transform: rotate(360deg);transform: rotate(360deg);;}}@keyframes spin {0% {-webkit-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg);;}100% {-webkit-transform: rotate(360deg);-ms-transform: rotate(360deg);transform: rotate(360deg);;}}#loader-wrapper .loader-section {position: fixed;top: 0;width: 51%;height: 100%;background: #fff;z-index: 1000;-webkit-transform: translateX(0);-ms-transform: translateX(0);transform: translateX(0);;}#loader-wrapper .loader-section.section-left {left: 0;}#loader-wrapper .loader-section.section-right {right: 0;}.loaded #loader-wrapper .loader-section.section-left {-webkit-transform: translateX(-100%);-ms-transform: translateX(-100%);transform: translateX(-100%);-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);}.loaded #loader-wrapper .loader-section.section-right {-webkit-transform: translateX(100%);-ms-transform: translateX(100%);transform: translateX(100%);-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);}.loaded #loader {opacity: 0;-webkit-transition: all 0.3s ease-out;transition: all 0.3s ease-out;}.loaded #loader-wrapper {visibility: hidden;-webkit-transform: translateY(-100%);-ms-transform: translateY(-100%);transform: translateY(-100%);-webkit-transition: all 0.3s 1s ease-out;transition: all 0.3s 1s ease-out;}.no-js #loader-wrapper {display: none;}.no-js h1 {color: lightgray;}#content {margin: 0 auto;padding-bottom: 50px;width: 80%;max-width: 978px;}
+
+</style>
+ <link rel="me" href="https://www.blogger.com/profile/18233884491886238654" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+</head>
+ <body translate="no" >
+  <nav class="" style="">
+  <div>
+  </div>
+  
+  <div class="">
+<div class="h-0 w-0 hover:ring-0 user cursor-pointer relative ring-blue-0/0 rounded-full bg-cover bg-center bg-[url('')]">
+      
+       <div class="">
+        
+      </div>
+    </div>
+    <div class="sm:hidden cursor-pointer" id="mobile-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path class="dark:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" ></path>
+      </svg>
+    </div>
+  </div>
+</nav>
+
+<div class="row cards animate__animated animate__zoomIn"> 
+
+    <div id="loader-wrapper">
+    	<div id="loader"></div>
+    	<div class="loader-section section-left"></div>
+    	<div class="loader-section section-right"></div>
+      
+    </div>
+  
+     <a  href='/hls/vtv5.html' class='bdenv'  title='SPOTV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/014df8b1/0a82.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:SPOTV2' class='bdenv'  title='SPOTV 2'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/323d2882/47cc.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:MNCSports' class='bdenv'  title='MNC Sports'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/6fa56cb8/ec1d.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:MNCSp2' class='bdenv'  title='MNC Sports 2'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/1c357a3c/2216.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:MNCSp3' class='bdenv'  title='MNC Sports 3'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/733920f1/ae2a.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Soccer' class='bdenv'  title='Soccer Channel'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/68cfcd5e/e268.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:beIN1' class='bdenv'  title='beIN Sports 1'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/dfa0be7b/707f.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:beIN3' class='bdenv'  title='beIN Sports 3'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/fe0ce1ac/ec77.jpg'>
+            </div>
+        </span>
+    </a>
+  
+    <a  href='go:fightsport' class='bdenv'  title='fightsport'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/1dc9540a/4bf9.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:KidsTV' class='bdenv'  title='Kids TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/3b6db709/0a3c.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:NickJr' class='bdenv'  title='Nick Jr.'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/b34819c9/7b25.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Boomerang' class='bdenv'  title='Boomerang'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/b5888c44/8a79.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Cbeebies' class='bdenv'  title='Cbeebies'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/878c9663/10b6.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:CartoonN' class='bdenv'  title='Cartoon Network'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/85f263e5/a06e.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Nick' class='bdenv'  title='Nick'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/fe9c4d7c/047e.jpg'>
+            </div>
+        </span>
+    </a>
+  
+  <a  href='go:miaomi' class='bdenv'  title='miaomi'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/a63412fe/6c23.jpg'>
+            </div>
+        </span>
+    </a>
+  
+  <a  href='go:BABYTV' class='bdenv'  title='BABY TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhF9njVy3VzVaRXHFBg04cP4IFdERu7jhxvVxmz5M7qJgD3dy7wIwMY1C3LJRRH2MXVKWPl4yiGJiMmLF9idzQOEkH4RgXI2PkOVzLrsLCzFX16MDC0JZ3L8BcF7QK0XDh2-TShuqx0dej3Uon19F4GPuHuThdWUEiS49K-vtOfRPpSNof49n87OxMvnA/s1600/bd02aa7e-42be-452d-9124-855c88df7143.jpg'>
+            </div>
+        </span>
+    </a>
+  
+   <a  href='go:hbo' class='bdenv'  title='hbo'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/a3cb585c/75d7.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:hbohits' class='bdenv'  title='hbo hits'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/5f07ab7e/500c.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:hbofam' class='bdenv'  title='hbo family'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/50218bd6/24c8.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:hbosig' class='bdenv'  title='hbo signature'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/f25933f4/e995.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:cinemax' class='bdenv'  title='cinemax'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/e4cf63f4/2d01.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:13' class='bdenv'  title='galaxy'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/53936b71/02f1.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:12' class='bdenv'  title='galaxy premium'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/3af0c0bd/0991.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:14' class='bdenv'  title='imc'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/034d6bff/f26d.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Thrill' class='bdenv'  title='Thrill'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/875231f3/482a.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:CelMov' class='bdenv'  title='Celestial Movies '>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/fd5ed48e/bbc8.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:CelCM' class='bdenv'  title='Celestial Classic Movie'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/70535672/a3a6.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:ZeeB' class='bdenv'  title='Zee Bioskop'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/4fb48375/0c54.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:tvNM' class='bdenv'  title='tvN Movies'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/65d0d46f/a891.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:HitsM' class='bdenv'  title='Hits Movies'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/756b340a/ce38.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Berita1' class='bdenv'  title='Berita Satu'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/03dd03e5/9af2.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:MNCN' class='bdenv'  title='MNC News'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/f2656383/302e.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:IDXC' class='bdenv'  title='IDX Channel'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/167bbfc2/70d0.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:SEAT' class='bdenv'  title='SEA Today'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/2c10c930/6e2d.jpg'>
+            </div>
+        </span>
+    </a>
+  
+   <a  href='go:NHKPREM' class='bdenv'  title='NHK PREM'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi14MeY4CQdYYm5p0jHXmihvBd2jS4G38E9rNOYtbN4XlI0Ozp_bFFAiJEwZCj0uEoEXFV9X5f09TSJ358fegKSaHnq8GDN_BnzTZ_gpyW4GGQd_FbZxe6ZP0bSqpzSI6AZxCelmPh4EVv_wBnJtqDYLuBwJDjX5nR8cRCYxDWwQvzGwGVoJxU56wOt0w/s1600/69a2b155-61c4-450d-b5c1-4ee01f7c1308.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:CNewsA' class='bdenv'  title='Channel News Asia'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/5c8c58ba/2cd8.jpg'>
+            </div>
+        </span>
+    </a>
+  
+   <a  href='go:EuroNews' class='bdenv'  title='Euro News'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/28e94b32/61b0.jpg'>
+            </div>
+        </span>
+    </a>
+  
+   <a  href='go:350' class='bdenv'  title='abc australia'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/739d3b79/e228.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:351' class='bdenv'  title='arirang'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/95d24caa/6393.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:bwn' class='bdenv'  title='bbc world news'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/76b09f50/ecb3.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:fnc' class='bdenv'  title='fox news channel'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/0b6c38ac/b1b7.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:AlJE' class='bdenv'  title='Al Jazeera English'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/1941edbd/fc4f.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:RTEng' class='bdenv'  title='RT English'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/86fa4e62/62b2.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Fr24' class='bdenv'  title='France 24'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/4c072e94/b674.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:DW' class='bdenv'  title='DW'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/e26b06a3/5aeb.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:TRTWorld' class='bdenv'  title='TRT World'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/fc7ae24b/815d.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:CGTN' class='bdenv'  title='CGTN'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/f7e69a3d/09ae.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:RCTI' class='bdenv'  title='RCTI'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/96280690/71ff.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:GTV' class='bdenv'  title='GTV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/6962410c/a91f.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:MNCTV' class='bdenv'  title='MNC TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/19780654/61cf.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:iNews' class='bdenv'  title='iNews '>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/a60c01a7/e977.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:ANTV' class='bdenv'  title='ANTV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/c55a8dd7/cb38.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:TransTV' class='bdenv'  title='Trans TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/734e1cb6/7fbb.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Trans7' class='bdenv'  title='Trans 7'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/a923bb12/2ae6.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:TVOne' class='bdenv'  title='TV One'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/c22ab055/24ba.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:MetroTV' class='bdenv'  title='Metro TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/d20d2067/eaeb.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:RTV' class='bdenv'  title='RTV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/87151165/a6b8.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:KompasTV' class='bdenv'  title='Kompas TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/09aa0e6c/805e.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:TVRI' class='bdenv'  title='TVRI'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/1444bab9/d500.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:JakTV' class='bdenv'  title='Jak TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/39456406/3a33.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:JTV' class='bdenv'  title='JTV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/420c2070/f186.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:BaliTV' class='bdenv'  title='Bali TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/222a9012/c081.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:DAAITV' class='bdenv'  title='DAAI TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/b918495f/71da.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:BandungTV' class='bdenv'  title='Bandung TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/3b420105/0bb4.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Net' class='bdenv'  title='Net.'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/7f7d35c4/5085.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:MusicTV' class='bdenv'  title='Music TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/3d755720/23ef.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Infotai' class='bdenv'  title='Infotainment'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/82ac17f3/e240.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+ 
+     <a  href='go:Entertai' class='bdenv'  title='Entertainment'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/67d9150f/f41c.jpg'>
+            </div>
+        </span>
+    </a>
+  
+  <a  href='go:fmn' class='bdenv'  title='fmn'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/2bcd7b9b/ea83.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:OKTV' class='bdenv'  title='OK TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/684fa173/477d.jpg'>
+            </div>
+        </span>
+    </a>
+  
+  <a  href='go:VisionP' class='bdenv'  title='Vision Prime'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/b036841c/c789.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:AXN' class='bdenv'  title='AXN'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/96b6438c/271f.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Animax' class='bdenv'  title='Animax'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/b992cff6/85d4.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:KIX' class='bdenv'  title='KIX'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/2ba399a4/488d.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:WarnerTV' class='bdenv'  title='Warner TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/6121e586/36e0.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:tvN' class='bdenv'  title='tvN'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/176ff1fa/dbbf.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:One' class='bdenv'  title='One'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/a88b30a4/3c5d.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Lifetime' class='bdenv'  title='Lifetime'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/8e771a2b/b9e1.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:HITS' class='bdenv'  title='HITS'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/279a5579/c502.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:TV5Monde' class='bdenv'  title='TV5 Monde'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/46d96792/9f21.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:JiangsuTV' class='bdenv'  title='Jiangsu TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/0952a9ad/05d4.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:HunanTV' class='bdenv'  title='Hunan TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/52c576b7/1c9e.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:ShangDTV' class='bdenv'  title='Shanghai Dragon TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/7443ba5e/1b47.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:XKTV' class='bdenv'  title='Xing Kong TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/7b0c9e87/6c4d.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:AnhuiTV' class='bdenv'  title='Anhui TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/d41b738e/5d9b.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:MuslimTV' class='bdenv'  title='Muslim TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/bb807745/db67.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Life' class='bdenv'  title='Life'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/c73ee590/411c.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:AlQuran' class='bdenv'  title='Al Quran Al Kareem'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/0c2bd4e5/cced.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:EWTN' class='bdenv'  title='EWTN'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/df45266c/bc73.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:TV9' class='bdenv'  title='TV9'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/6d273012/3282.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Reformed' class='bdenv'  title='Reformed 21'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/2598fda3/9432.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:TVMu' class='bdenv'  title='TVMu'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/e0311c41/7f26.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:Tawaf' class='bdenv'  title='Tawaf TV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/a54193d4/38c3.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:BeSmart' class='bdenv'  title='BeSmart'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/7638cfc9/171d.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:NHKW' class='bdenv'  title='NHK World Japan'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/4a704345/c845.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:BBCEarth' class='bdenv'  title='BBC Earth'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/6cc30029/9f66.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:DiscovC' class='bdenv'  title='Discovery Channel'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/7b724304/9609.jpg'>
+            </div>
+        </span>
+    </a>
+  
+   <a  href='go:NATGEO' class='bdenv'  title='NAT GEO'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8yW6jSJuaixwJu5DSwb8XckVX9Kwf6BzDg9pQqCdhwmdsm7AguV3KNoowZU9YlGBmD5g9-sdJxjndE3725268rB3PTUXZkqfK0xyy6JDbuyD7gE0d6UyEv88Y5vdMTSxnzhZ3pfrlDLpEJRctm14an155DF5nYXWJhhNwrhSTp-Szzmdkh-tu1wq5ng/s1600/dd31b7da-f088-43e5-ab3d-3330c17b5acd.jpg'>
+            </div>
+        </span>
+    </a>
+  
+  <a  href='go:ngw' class='bdenv'  title='nat geo wild'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/dda50ade/afd7.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:AnimalP' class='bdenv'  title='Animal Planet'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/cc77e481/94fa.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:History' class='bdenv'  title='History'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/9665df2d/7f52.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:CrimeI' class='bdenv'  title='Crime Investigation'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/321af2eb/2bc9.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:CGTND' class='bdenv'  title='CGTN Documentary'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/9a66a726/488c.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:LifeF' class='bdenv'  title='Lifestyle & Fashion'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/2f7f8694/75e4.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:AFoodN' class='bdenv'  title='Asian Food Network'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/330ed008/6a24.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:MShopS' class='bdenv'  title='MShop Signature'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/b573555e/3c54.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:MShopSM' class='bdenv'  title='MShop Super Sale'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/cdbf76d7/6fdc.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:HGTV' class='bdenv'  title='HGTV'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/6410b465/369f.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+     <a  href='go:TLC' class='bdenv'  title='TLC'>
+        <span class='teams'>
+            <div class='bden'>
+                <img  id='img1'  src='https://static.mncnow.id/images/channel/5c5d1625/3494.jpg'>
+            </div>
+        </span>
+    </a>
+ 
+</div>
+
+<script src="https://rtmsport.com/1.js"></script>
+<script src='https://rtmsport.com/2.js'></script>
+<script src='https://rtmsport.com/3.js'></script>
+
+     
+</body> 
+  
+ <body>
+  <b:section class='main' id='main' showaddelement='yes'></b:section>
+  <!-- Please Keep The Credits -->
+  <center><a href='//subinsb.com/make-a-blank-blogger-template'></a></center>
+ </body>
+</html>
