@@ -141,14 +141,12 @@ function videovisible() {
           drm: {
             clearKeys: {
    // 'key-id-in-hex': 'key-in-hex',
-                             '832717475b2a5115b7f95b005a0ce0a7': '10331c4aa012924657261a4f908fac23',
-                  'a2e339d9da8157df90b04eb12b0ef082': 'e377f6a7186f22ba35b0b56baf65d0f5',
-                  'e8b98661dcee5706ba3e9c319da5eefc': '08914c3dd4ad15a8cc6eaaa5ab2eaca6',
+                             '296de2ff9f35410f114b640b7d977e1f': 'b523b14874d8644793034cb692976795',
                                 }
           }
         });
 
-            player.load('https://bvsat02.cdn.rcs.net.ar/mnp/tyc/output.mpd') // source
+            player.load('https://prod-drm-vidio-com-ctv-worldcup1.akamaized.net/out/v1/39d65abedd7c448c81463429b73288a0/index.mpd') // source
                 .then(function () {
 
                     var variantTracks = player.getVariantTracks();
