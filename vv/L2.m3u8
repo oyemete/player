@@ -1,12 +1,12 @@
 #EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-STREAM-INF:PROGRAM-ID=1,CLOSED-CAPTIONS=NONE,BANDWIDTH=2500000,NAME=1080p,RESOLUTION=1920x1080
-https://etslive-2-vidio-com.akamaized.net/exp=1670846112~acl=/hls-p/ingest_9302_*/*~hmac=411559e6b2f49cd5e70204b44fc140ef0cef449fdf69d5edb0ef3d41ab710e1f/hls-p/ingest_9302_1080p/index.m3u8
+https://etslive-2-vidio-com.akamaized.net/exp=1671200833~acl=/hls-p/ingest_9786_*/*~hmac=5bc9ab569637a4d7de183fd6a6ecd4b595c9ed18fa60228a04a211a724fd7bdc/hls-p/ingest_9786_1080p/index.m3u8
 #EXT-X-STREAM-INF:PROGRAM-ID=1,CLOSED-CAPTIONS=NONE,BANDWIDTH=1500000,NAME=720p,RESOLUTION=1280x720
-https://etslive-2-vidio-com.akamaized.net/exp=1670846112~acl=/hls-p/ingest_9302_*/*~hmac=411559e6b2f49cd5e70204b44fc140ef0cef449fdf69d5edb0ef3d41ab710e1f/hls-p/ingest_9302_720p/index.m3u8
+https://etslive-2-vidio-com.akamaized.net/exp=1671200833~acl=/hls-p/ingest_9786_*/*~hmac=5bc9ab569637a4d7de183fd6a6ecd4b595c9ed18fa60228a04a211a724fd7bdc/hls-p/ingest_9786_720p/index.m3u8
 #EXT-X-STREAM-INF:PROGRAM-ID=1,CLOSED-CAPTIONS=NONE,BANDWIDTH=1200000,NAME=480p,RESOLUTION=854x480
-https://etslive-2-vidio-com.akamaized.net/exp=1670846112~acl=/hls-p/ingest_9302_*/*~hmac=411559e6b2f49cd5e70204b44fc140ef0cef449fdf69d5edb0ef3d41ab710e1f/hls-p/ingest_9302_480p/index.m3u8
+https://etslive-2-vidio-com.akamaized.net/exp=1671200833~acl=/hls-p/ingest_9786_*/*~hmac=5bc9ab569637a4d7de183fd6a6ecd4b595c9ed18fa60228a04a211a724fd7bdc/hls-p/ingest_9786_480p/index.m3u8
 #EXT-X-STREAM-INF:PROGRAM-ID=1,CLOSED-CAPTIONS=NONE,BANDWIDTH=625000,NAME=360p,RESOLUTION=640x360
-https://etslive-2-vidio-com.akamaized.net/exp=1670846112~acl=/hls-p/ingest_9302_*/*~hmac=411559e6b2f49cd5e70204b44fc140ef0cef449fdf69d5edb0ef3d41ab710e1f/hls-p/ingest_9302_360p/index.m3u8
+https://etslive-2-vidio-com.akamaized.net/exp=1671200833~acl=/hls-p/ingest_9786_*/*~hmac=5bc9ab569637a4d7de183fd6a6ecd4b595c9ed18fa60228a04a211a724fd7bdc/hls-p/ingest_9786_360p/index.m3u8
 #EXT-X-STREAM-INF:PROGRAM-ID=1,CLOSED-CAPTIONS=NONE,BANDWIDTH=375000,NAME=240p,RESOLUTION=426x240
-https://etslive-2-vidio-com.akamaized.net/exp=1670846112~acl=/hls-p/ingest_9302_*/*~hmac=411559e6b2f49cd5e70204b44fc140ef0cef449fdf69d5edb0ef3d41ab710e1f/hls-p/ingest_9302_240p/index.m3u8
+https://etslive-2-vidio-com.akamaized.net/exp=1671200833~acl=/hls-p/ingest_9786_*/*~hmac=5bc9ab569637a4d7de183fd6a6ecd4b595c9ed18fa60228a04a211a724fd7bdc/hls-p/ingest_9786_240p/index.m3u8
