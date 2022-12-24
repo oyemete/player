@@ -140,12 +140,15 @@
           player.addEventListener('error', onErrorEvent);
           player.configure({
             drm: {
-              clearKeys: {
-                '4ae10c2357e250e088bb8a5ab044dd50': 'e7f47e2b948e9222cf4d24b51881ec04'
-              }
+              clearKeys: { 
+      // 'key-id-in-hex': 'key-in-hex',
+      'ce125d7af48a45799d671941125ed55e': '973599517f31f3b4327fa975f549ed2b',
+      '55b19ea29fdd4c96825531f96a504df1': 'a6ec613e0eadfb923ff816e4c8c68a4a', 
+      '1de6210c1b064b928c5bb003da7023e5': 'd1eb59b178c89539d7caf1022968107e'
+    }
             }
           });
-          player.load('https://channel-canal5-cdn.blim.com/manifest.mpd') // source
+          player.load('https://opl-n02.cdn-ncplus.pl/live/store01/11Sports3/hd2-dashdrm02/11Sports3.mpd') // source
             .then(function() {
               var variantTracks = player.getVariantTracks();
               var bitrates = [];
