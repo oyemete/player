@@ -140,12 +140,14 @@
           player.addEventListener('error', onErrorEvent);
           player.configure({
             drm: {
-              clearKeys: {
-                '4ae10c2357e250e088bb8a5ab044dd50': 'e7f47e2b948e9222cf4d24b51881ec04'
-              }
+              clearKeys: { 
+      // 'key-id-in-hex': 'key-in-hex',
+      '71be6f968ab54a8bb847b58bbc7c628e': '3dd907fffdbffd7ec01b4025ad97ec6a',
+      '4e1df327c661472f96319dd7e98bf5bd': '36263f85c3c25a131f47cee90924e1f3'
+    }
             }
           });
-          player.load('https://channel-tdn-cdn.blim.com/manifest.mpd') // source
+          player.load('https://opl-n02.cdn-ncplus.pl/live/store01/11Sports2/hd2-dashdrm02/11Sports2.mpd') // source
             .then(function() {
               var variantTracks = player.getVariantTracks();
               var bitrates = [];
