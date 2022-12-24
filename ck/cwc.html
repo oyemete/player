@@ -139,14 +139,16 @@ function videovisible() {
             
         player.configure({
           drm: {
-            clearKeys: {
-   // 'key-id-in-hex': 'key-in-hex',
-                             '296de2ff9f35410f114b640b7d977e1f': 'b523b14874d8644793034cb692976795',
-                                }
+            clearKeys: { 
+      // 'key-id-in-hex': 'key-in-hex',
+      '014e7cf40d9e490a812964f4aa72449e': '01b8caafb230eb2a07cc965d54ef4441',
+      '9d042fa273964e24a9109e23f4e313cc': '540e3601e1b82192c76c7411ad9c8c8e', 
+      '801d9e39d41a49418615f7cee4b6e031': '84b9bec014f0509ee2a4296e5877cf40'
+    }
           }
         });
 
-            player.load('https://cors-anywhere.herokuapp.com/https://prod-drm-vidio-com-ctv-worldcup1.akamaized.net/out/v1/39d65abedd7c448c81463429b73288a0/index.mpd') // source
+            player.load('https://opl-n02.cdn-ncplus.pl/live/store01/11Sports1/hd2-dashdrm02/11Sports1.mpd') // source
                 .then(function () {
 
                     var variantTracks = player.getVariantTracks();
